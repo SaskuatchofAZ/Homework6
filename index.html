@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" type="text/css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
+
 <body>
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
@@ -19,15 +22,17 @@
 
         <div class="row">
             <div class="col-3">
-                <div class="row" >
+                <div class="row">
                     <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="text" placeholder="Search a City" aria-label="Search" id="search-box">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="city-search">Search</button>
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search a City" aria-label="Search"
+                            id="search-box">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                            id="city-search">Search</button>
                     </form>
                 </div>
                 <div class="row">
                     <ul class="list-group" id="city-list">
-                        
+
                     </ul>
                 </div>
             </div>
@@ -36,52 +41,57 @@
                 <div class="row">
                     <div class="card" style="width: 100%;">
                         <div class="card-body" id="today">
-                            <h1><span id="city-date"></span></h1>
-                            <p>Temperature: <span id="today-temp"></span> &#176;F</p>
-                            <p>Humidity: <span id="today-hum"></span>%</p>
-                            <p>Wind Speed: <span id="today-wind"></span> MPH</p>
-                            <p>UV Index: <span id="today-uv"></span></p>
-                          
+                            <div class="col-9">
+                                <h1><span id="city-date"></span></h1>
+                                <p>Temperature: <span id="today-temp"></span> &#176;F</p>
+                                <p>Humidity: <span id="today-hum"></span>%</p>
+                                <p>Wind Speed: <span id="today-wind"></span> MPH</p>
+                                <p>UV Index: <span id="today-uv"></span></p>
+                            </div>
+                            <div class="col-3">
+                                <img id="main-icon" alt="main icon">
+                            </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="row" id="five-day">
                     <div class="card" style="width: 10rem; margin: 5px;">
                         <div class="card-body" id="day5">
-                            <h3><span id="daydate5"></span></h3>
-                            <span id="icon5"></span>
+                            <h5><span id="daydate5"></span></h5>
+                            <img alt="weather icon" id="icon5"></img>
                             <p>Temp: <span id="temp5"></span> &#176;F</p>
                             <p>Humidity: <span id="hum5"></span>%</p>
                         </div>
                     </div>
                     <div class="card" style="width: 10rem; margin: 5px;">
                         <div class="card-body" id="day13">
-                            <h3><span id="daydate13"></span></h3>
-                            <span id="icon13"></span>
+                            <h5><span id="daydate13"></span></h5>
+                            <img alt="weather icon" id="icon13"></img>
                             <p>Temp: <span id="temp13"></span> &#176;F</p>
                             <p>Humidity: <span id="hum13"></span>%</p>
                         </div>
                     </div>
                     <div class="card" style="width: 10rem; margin: 5px;">
                         <div class="card-body" id="day21">
-                            <h3><span id="daydate21"></span></h3>
-                            <span id="icon21"></span>
+                            <h5><span id="daydate21"></span></h5>
+                            <img alt="weather icon" id="icon21"></img>
                             <p>Temp: <span id="temp21"></span> &#176;F</p>
                             <p>Humidity: <span id="hum21"></span>%</p>
                         </div>
                     </div>
                     <div class="card" style="width: 10rem; margin: 5px">
                         <div class="card-body" id="day29">
-                            <h3><span id="daydate29"></span></h3>
-                            <span id="icon29"></span>
+                            <h5><span id="daydate29"></span></h5>
+                            <img alt="weather icon" id="icon29"></img>
                             <p>Temp: <span id="temp29"></span> &#176;F</p>
                             <p>Humidity: <span id="hum29"></span>%</p>
                         </div>
                     </div>
                     <div class="card" style="width: 10rem; margin: 5px;">
                         <div class="card-body" id="day37">
-                            <h3><span id="daydate37"></span></h3>
-                            <span id="icon37"></span>
+                            <h5><span id="daydate37"></span></h5>
+                            <img alt="weather icon" id="icon37"></img>
                             <p>Temp: <span id="temp37"></span> &#176;F</p>
                             <p>Humidity: <span id="hum37"></span>%</p>
                         </div>
@@ -92,7 +102,8 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
